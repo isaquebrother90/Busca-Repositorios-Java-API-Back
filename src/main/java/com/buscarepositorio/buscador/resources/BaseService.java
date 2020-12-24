@@ -36,7 +36,8 @@ public abstract class BaseService {
 
 	public List<RepositorioEntity> salvarRepositorios(RepositoriosResponseApi res) {
 
-		List<RepositorioEntity> lista = new ArrayList<>();
+		List<RepositorioEntity> lista = new ArrayList<>();// Instanciei um objeto lista. peguei os items da resposta e iterei, mas antes, instanciei um objeto da entidade
+		//de repositorios, pra setar cada atributo, atribuindo cada atributo da resposta ao campo correspondente na classe repositorio entity.
 		res.getItems().forEach(item -> {
 			RepositorioEntity repositorio = new RepositorioEntity();
 			repositorio.setForks(item.getForks_count());

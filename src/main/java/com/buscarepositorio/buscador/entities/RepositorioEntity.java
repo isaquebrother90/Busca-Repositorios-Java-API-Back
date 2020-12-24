@@ -5,16 +5,23 @@ import javax.persistence.Table;
 
 import com.buscarepositorio.buscador.resources.BaseEntity;
 
+import io.swagger.annotations.ApiModelProperty;
+
 //ENTIDADE DO BANCO DE DADOS
 
 @Entity
 @Table(name = "repositorios")
 public class RepositorioEntity extends BaseEntity {
 
+	@ApiModelProperty(value = "Código do repositório")
 	private String id;
+	@ApiModelProperty(value = "Avatar do usuário")
 	private String image;
+	@ApiModelProperty(value = "Nome do usuário")
 	private String name;
+	@ApiModelProperty(value = "Estrelas do repositório")
 	private int stars;
+	@ApiModelProperty(value = "Forks do repositório")
 	private int forks;
 
 	public RepositorioEntity(String id, String image, String name, int stars, int forks) {
